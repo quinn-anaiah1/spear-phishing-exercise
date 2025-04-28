@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Important Security Update</title>
+</head>
+<body>
+    <h2>Urgent Account Verification</h2>
+    <p>Dear employee,</p>
+    <p>We detected a security issue with your account. Please <a href="http://localhost:8080">verify your credentials</a> immediately to prevent access interruptions.</p>
+    <p>Regards,<br>HackShield Technologies</p>
+</body>
+</html>
+

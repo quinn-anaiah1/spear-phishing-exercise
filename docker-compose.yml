@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  spearphish:
+    build: .
+    container_name: spearphish-env
+    ports:
+      - "8080:80"
+    stdin_open: true
+    tty: true
+
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: mailpit
+    ports:
+      - "1025:1025"  # SMTP port
+      - "8025:8025"  # Web inbox
