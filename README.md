@@ -47,10 +47,11 @@ sudo systemctl enable docker
 # 🛠️ Environment Overview
 The lab consists of two Docker containers:
 
-| Container|  Purpose  |
-|:-----||------:|
-| spearphish  | Runs Social Engineering Toolkit (SET) + Apache server |
-| mailpit  |  mailpit	Provides a fake SMTP server + web inbox  |
+| Container  | Purpose                                      |
+|------------|----------------------------------------------|
+| spearphish | Runs Social Engineering Toolkit (SET) + Apache server |
+| mailpit    | Provides a fake SMTP server + web inbox      |
+
 
 All services run locally and offline for maximum safety.
 ---
