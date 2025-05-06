@@ -19,5 +19,5 @@ services:
     image: axllent/mailpit:latest
     container_name: mailpit2
     ports:
-      - "1125:1025"  # SMTP port
-      - "8125:8025"  # Private Web inbox for after log in
+      - "1125:1125"  # SMTP port
+      - "8125:8125"  # Private Web inbox for after log in
