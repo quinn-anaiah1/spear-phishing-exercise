@@ -1,6 +1,6 @@
 import requests
 
-MAILPIT_API = "http://localhost:8025/api/v1/messages"
+MAILPIT_API = "http://localhost:8125/api/v1/messages"
 
 response = requests.delete(MAILPIT_API)
 

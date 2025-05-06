@@ -155,7 +155,7 @@ for msg in messages:
     email['From'] = msg["sender"]
     email['To'] = 'employee@hackshield.com'
 
-    with smtplib.SMTP('localhost', 1025) as smtp:
+    with smtplib.SMTP('localhost', 1125) as smtp:
         smtp.send_message(email)
 
 print("✓ Sent sample messages to Mailpit inbox.")
