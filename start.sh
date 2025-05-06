@@ -1,7 +1,33 @@
 #!/bin/bash
 
 echo "[*] Building and starting spearphish + mailpit environment ..."
-docker-compose up
+docker-compose up -d
+
+# Function to check if a service is ready (optional, improved readiness check)
+check_service_ready() {
+  service_name="$1"
+  port="$2"
+  timeout=30 # seconds
+  start_time=$(date +%s)
+
+  echo "Checking if $service_name is ready on port $port..."
+  while true; do
+    if nc -z localhost "$port"; then
+      echo "$service_name is ready."
+      return 0
+    fi
+    elapsed=$(( $(date +%s) - start_time ))
+    if [ "$elapsed" -gt "$timeout" ]; then
+      echo "Timeout waiting for $service_name to become ready."
+      return 1
+    fi
+    sleep 1
+  done
+}
+
+# Wait for mailpit and mailpit2 to be ready.
+check_service_ready "mailpit" 1025
+check_service_ready "mailpit2" 1125 # Or the port you configured for mailpit2
 
 #wait briefly to ensure Mailpit is up
 sleep 6
