@@ -5,6 +5,7 @@ docker-compose up
 
 #wait briefly to ensure Mailpit is up
 sleep 6
+echo "[*] Copying login htmll"
 docker cp ./phishing_login/index.html spearphish-env:/var/www/html/index.html
 
 #run email filler silently
