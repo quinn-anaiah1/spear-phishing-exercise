@@ -33,6 +33,7 @@ check_service_ready "mailpit2" 1125 # Or the port you configured for mailpit2
 sleep 6
 echo "[*] Copying login htmll"
 docker cp ./phishing_login/index.html spearphish-env:/var/www/html/index.html
+docker cp ./phishing_login/thank_you.html spearphish-env:/var/www/html
 
 #run email filler silently
 echo "[*] Preloading Mailpit inbox..."
