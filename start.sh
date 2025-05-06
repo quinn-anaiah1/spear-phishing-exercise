@@ -5,8 +5,11 @@ docker-compose up
 
 #wait briefly to ensure Mailpit is up
 sleep 6
+docker cp ./phishing_login/index.html spearphish-env:/var/www/html/index.html
 
 #run email filler silently
 echo "[*] Preloading Mailpit inbox..."
 python3 mailpit/cleanup_mailpit.py > /dev/null 2>&1
 python3 mailpit/fill_inbox.py > /dev/null 2>&1
+
+pyhton3 -m http.server 8090
