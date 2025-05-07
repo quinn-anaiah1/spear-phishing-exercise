@@ -34,6 +34,7 @@ sleep 6
 echo "[*] Copying login html"
 docker cp ./phishing_login/fake_login.html spearphish-env:/var/www/html/index.html
 docker cp ./phishing_login/thank_you.html spearphish-env:/var/www/html/thank_you.html
+docker cp ./phishing_login/app.py spearphish-env:/var/www/html/app.py
 
 #run email filler silently
 echo "[*] Preloading Mailpit inbox..."0

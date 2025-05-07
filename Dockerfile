@@ -26,4 +26,5 @@ WORKDIR /opt/set
 EXPOSE 80
 
 # Start Apache and run SETCMD service apache2 start && python3 setoolkit
-CMD ["/bin/bash"]
+CMD service apache2 start && tail -f /dev/null
+#["/bin/bash"]
