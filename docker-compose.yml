@@ -11,8 +11,7 @@ services:
     depends_on:
       - mailpit
       - mailpit2
-    networks:
-      - phishingnet
+    
 
   mailpit:
     image: axllent/mailpit:latest
@@ -26,6 +25,4 @@ services:
     ports:
       - "1125:1025" # SMTP port
       - "8125:8025" # Private Web inbox for after log in
-  networks:
-  phishingnet:
-    driver: bridge
+  
