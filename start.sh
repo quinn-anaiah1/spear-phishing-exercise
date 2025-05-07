@@ -43,4 +43,4 @@ python3 mailpit/fill_inbox.py > /dev/null 2>&1
 
 
 echo "[*] Starting login site..."
-python3 ./phishing_login/app.py
+docker exec spearphish-env python3 /var/www/html/app.py
