@@ -43,5 +43,4 @@ python3 mailpit/fill_inbox.py > /dev/null 2>&1
 
 
 echo "[*] Starting login site..."
-docker exec -d spearphish-env \
-  python3 -m http.server 8090 --directory /var/www/html
+python3 app.py

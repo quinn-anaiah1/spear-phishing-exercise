@@ -8,16 +8,24 @@ services:
       - "8080:80"
     stdin_open: true
     tty: true
+    depends_on:
+      - mailpit
+      - mailpit2
+    networks:
+      - phishingnet
 
   mailpit:
     image: axllent/mailpit:latest
     container_name: mailpit
     ports:
-      - "1025:1025"  # SMTP port
-      - "8025:8025"  # Web inbox
+      - "1025:1025" # SMTP port
+      - "8025:8025" # Web inbox
   mailpit2:
     image: axllent/mailpit:latest
     container_name: mailpit2
     ports:
-      - "1125:1025"  # SMTP port
-      - "8125:8025"  # Private Web inbox for after log in
+      - "1125:1025" # SMTP port
+      - "8125:8025" # Private Web inbox for after log in
+  networks:
+  phishingnet:
+    driver: bridge

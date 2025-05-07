@@ -18,12 +18,16 @@ RUN git clone https://github.com/trustedsec/social-engineer-toolkit.git /opt/set
 RUN grep -v pymssql /opt/set/requirements.txt > /opt/set/clean-reqs.txt && \
     pip3 install -r /opt/set/clean-reqs.txt
 
+    #Install flask 
+RUN pip install flask --no-cache-dir --progress-bar off
 
 # Set working directory
 WORKDIR /opt/set
+
+
 
 # Expose web server port
 EXPOSE 80
 
 # Start Apache and run SETCMD service apache2 start && python3 setoolkit
-CMD ["/bin/bash"]
+CMD ["/bin/bash", "start.sh"]
