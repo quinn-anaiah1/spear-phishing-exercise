@@ -30,7 +30,7 @@ check_service_ready "mailpit" 1025
 check_service_ready "mailpit2" 1125 # Or the port you configured for mailpit2
 
 #wait briefly to ensure Mailpit is up
-sleep 6
+
 echo "[*] Copying login html"
 docker cp ./phishing_login/fake_login.html spearphish-env:/var/www/html/index.html
 docker cp ./phishing_login/thank_you.html spearphish-env:/var/www/html/thank_you.html
@@ -42,6 +42,6 @@ python3 mailpit/cleanup_mailpit.py > /dev/null 2>&1
 python3 mailpit/fill_inbox.py > /dev/null 2>&1
 
 
-# echo "[*] Starting login site..."
-# docker exec -d spearphish-env \
-#   python3 -m http.server 8090 --directory /var/www/html
+echo "[*] Starting login site..."
+docker exec -d spearphish-env \
+  python3 -m http.server 8090 --directory /var/www/html
