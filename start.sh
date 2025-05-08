@@ -46,4 +46,5 @@ python3 mailpit/fill_inbox.py > /dev/null 2>&1
 
 
 echo "[*] Starting login site..."
+docker exec -e PORT=5000 login-page python3 /app/app.py
 
