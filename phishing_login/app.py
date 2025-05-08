@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect
-
+import os
 app = Flask(__name__)
 
 @app.route("/fake_login", methods=["GET"])
@@ -17,5 +17,5 @@ def capture():
    
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8082, threaded=False)
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 80)))
 
