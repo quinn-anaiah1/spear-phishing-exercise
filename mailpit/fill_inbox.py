@@ -16,7 +16,7 @@ messages = [
         "subject": "Finance Q1 Report",
         "body": "Attached is the Q1 payroll report. Confidential data for internal review only.\n- CFO",
         "sender": "hr@hackshield",
-        "attachment": "/mailpit/q1_finance_report.csv",
+        "attachment": "mailpit/q1_finance_report.csv",
     },
     {
         "sender": "hiring@hackshield",
@@ -44,7 +44,7 @@ messages = [
         "sender": "hiring@hackshield.com",
         "subject":"[CONFIDENTIAL] Interview Questions: Security Analyst Role",
         "body": "Attached youll find the interview questions for the upcoming position. For securty reasons the file has been encrypted. Per usual the decryption key  will be sent separately",
-        "attachment": "/mailpit/interview_file_ecb.enc",
+        "attachment": "mailpit/interview_file_ecb.enc",
     }
     
 ]
