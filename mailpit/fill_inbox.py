@@ -70,7 +70,8 @@ for msg in messages:
             continue  # Skip sending if the file is missing
     else:
         # Plain text-only email
-        email = MIMEText(msg["body"])
+        email = MIMEMultipart()  # Still use MIMEMultipart for consistency
+        email.attach(MIMEText(msg["body"], 'plain'))
         
     email['Subject'] = msg["subject"]
     email['From'] = msg["sender"]
