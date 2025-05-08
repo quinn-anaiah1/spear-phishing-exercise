@@ -13,11 +13,9 @@ services:
       - mailpit2
   login-page:
     build:
-    container_name: login-page
-    ports:
-      - "8081:80"
-    
-    
+      context: ./phishing_login
+      ports:
+        - "8081:80"
 
   mailpit:
     image: axllent/mailpit:latest

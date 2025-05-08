@@ -43,4 +43,4 @@ python3 mailpit/fill_inbox.py > /dev/null 2>&1
 
 
 echo "[*] Starting login site..."
-docker exec login_page python3 /var/www/html/app.py
+
