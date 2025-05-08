@@ -14,6 +14,7 @@ services:
   login-page:
     build:
       context: ./phishing_login
+    container_name: login-page
     ports:
         - "8081:80"
 
