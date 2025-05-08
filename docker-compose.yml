@@ -14,7 +14,7 @@ services:
   login-page:
     build:
       context: ./phishing_login
-      ports:
+    ports:
         - "8081:80"
 
   mailpit:
